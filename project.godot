@@ -78,3 +78,7 @@ pause={
 2d_render/layer_2="Red"
 2d_render/layer_3="Green"
 2d_render/layer_4="Blue"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

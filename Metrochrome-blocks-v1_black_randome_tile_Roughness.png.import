@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1yu5rn2o3j6i"
 path.s3tc="res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Roughness.png-6eaa3909bc09c6ad9a3d2954ffe05df9.s3tc.ctex"
+path.etc2="res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Roughness.png-6eaa3909bc09c6ad9a3d2954ffe05df9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Metrochrome-blocks-v1_black_randome_tile_Roughness.png"
-dest_files=["res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Roughness.png-6eaa3909bc09c6ad9a3d2954ffe05df9.s3tc.ctex"]
+dest_files=["res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Roughness.png-6eaa3909bc09c6ad9a3d2954ffe05df9.s3tc.ctex", "res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Roughness.png-6eaa3909bc09c6ad9a3d2954ffe05df9.etc2.ctex"]
 
 [params]
 

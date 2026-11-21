@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://uku5svdo2yn"
 path.s3tc="res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Base_Color.jpg-e92ce06b2a1a35be035f299fab719047.s3tc.ctex"
+path.etc2="res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Base_Color.jpg-e92ce06b2a1a35be035f299fab719047.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Metrochrome-blocks-v1_black_randome_tile_Base_Color.jpg"
-dest_files=["res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Base_Color.jpg-e92ce06b2a1a35be035f299fab719047.s3tc.ctex"]
+dest_files=["res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Base_Color.jpg-e92ce06b2a1a35be035f299fab719047.s3tc.ctex", "res://.godot/imported/Metrochrome-blocks-v1_black_randome_tile_Base_Color.jpg-e92ce06b2a1a35be035f299fab719047.etc2.ctex"]
 
 [params]
 
