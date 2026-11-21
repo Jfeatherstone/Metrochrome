@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dmxu0ab3acjw"]
+
+[ext_resource type="MeshLibrary" uid="uid://cxdhoc0gu46t4" path="res://resources/block-set-v1.tres" id="1_bswci"]
+[ext_resource type="Script" uid="uid://bwbsiyuhgl21t" path="res://scripts/timer.gd" id="1_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://dd6kc8r7e0y32" path="res://scenes/character.tscn" id="2_rus8k"]
+[ext_resource type="Texture2D" uid="uid://c6w7772t1tdo8" path="res://textures/grids/Red/texture_08.png" id="3_4nkto"]
+[ext_resource type="Texture2D" uid="uid://b3dok1a2g18m" path="res://textures/grids/Purple/texture_08.png" id="4_fcfvj"]
+[ext_resource type="Texture2D" uid="uid://dprwn2mbhlchg" path="res://textures/grids/Green/texture_08.png" id="5_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://d0u6tghsrrpq8" path="res://scenes/pause_menu.tscn" id="7_pa8r4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15mv3"]
+albedo_texture = ExtResource("3_4nkto")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3sih"]
+albedo_texture = ExtResource("4_fcfvj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2y5yt"]
+albedo_texture = ExtResource("5_pa8r4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_75xeh"]
+size = Vector3(100, 1, 200.93213)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5xbjy"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_4nkto"]
+sky_material = SubResource("ProceduralSkyMaterial_5xbjy")
+
+[sub_resource type="Environment" id="Environment_fcfvj"]
+background_mode = 2
+sky = SubResource("Sky_4nkto")
+tonemap_mode = 2
+
+[node name="level" type="Node3D" unique_id=1012240590]
+
+[node name="timer" type="Timer" parent="." unique_id=620197892]
+wait_time = 2.0
+script = ExtResource("1_fcfvj")
+
+[node name="grid_map" type="GridMap" parent="." unique_id=1220266037]
+mesh_library = ExtResource("1_bswci")
+cell_size = Vector3(1, 1, 1)
+cell_scale = 0.5
+data = {
+"cells": PackedInt32Array(-65536, 0, 0, -65536, 65535, 0, -1, 65535, 0, -1, 0, 0, -1, 1, 0, -65536, 1, 0, -65536, 65534, 0, -1, 65534, 0, -2, 65534, 0, -2, 65535, 0, -2, 0, 0, -2, 1, 0, -65535, 1, 0, -65535, 0, 0, -65535, 65535, 0, -65535, 65534, 0, -65536, 2, 1, -1, 2, 1, -131072, 2, 0, -65537, 2, 0, -65537, 3, 0, -131072, 3, 0, -131072, 4, 0, -65537, 4, 0, -65537, 5, 0, -65537, 6, 0, -131072, 6, 0, -131072, 5, 0, -65536, 65533, 786433, -1, 65533, 786433, -131072, 65532, 786433, -65537, 65532, 786433, -196608, 65532, 786432, -131073, 65532, 786432, -196608, 65531, 786432, -196608, 65530, 786432, -196608, 65529, 786432, -196608, 65528, 786432, -196608, 65527, 786432, -196608, 65526, 786432, -196608, 65525, 786432, -196608, 65524, 786432, -196608, 65523, 786432, -196608, 65522, 786432, -196608, 65521, 786432, -131073, 65521, 786432, -131073, 65522, 786432, -131073, 65523, 786432, -131073, 65524, 786432, -131073, 65525, 786432, -131073, 65526, 786432, -131073, 65527, 786432, -131073, 65528, 786432, -131073, 65529, 786432, -131073, 65530, 786432, -131073, 65531, 786432, -131072, 65533, 786432, -65537, 65533, 786432, -131070, 65520, 786432, -131070, 65519, 786432, -131069, 65520, 786432, -131069, 65519, 786432, -131068, 65517, 786432, -131067, 65517, 786432, -131067, 65516, 786432, -131068, 65516, 786432, -65538, 65518, 786432, -65539, 65518, 786432, -65539, 65517, 786432, -65538, 65517, 786432, -131072, 65513, 786432, -131071, 65513, 786432, -131071, 65512, 786432, -131072, 65512, 786432, -131071, 65495, 786432, -131070, 65495, 786432, -131070, 65494, 786432, -131070, 65493, 786432, -131071, 65493, 786432, -131072, 65493, 786432, -65537, 65493, 786432, -131072, 65494, 786432, -131071, 65494, 786432, -131069, 65495, 786432, -131069, 65494, 786432, -131069, 65496, 786432, -131070, 65496, 786432)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Character" parent="." unique_id=1240328724 instance=ExtResource("2_rus8k")]
+
+[node name="red_boxes" type="Node3D" parent="." unique_id=2031671929]
+
+[node name="red_box_1" type="CSGBox3D" parent="red_boxes" unique_id=1210140263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4944575, -2.025106, -23.344059)
+layers = 2
+material_override = SubResource("StandardMaterial3D_15mv3")
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+size = Vector3(1.5, 1.5, 1.5)
+
+[node name="blue_boxes" type="Node3D" parent="." unique_id=284873271]
+
+[node name="blue_box_1" type="CSGBox3D" parent="blue_boxes" unique_id=901683806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.855055, -2.0808215, -33.48893)
+layers = 8
+material_override = SubResource("StandardMaterial3D_e3sih")
+use_collision = true
+collision_layer = 8
+collision_mask = 8
+size = Vector3(1.5, 1.5, 1.5)
+
+[node name="green_boxes" type="Node3D" parent="." unique_id=745168561]
+
+[node name="green_box_1" type="CSGBox3D" parent="green_boxes" unique_id=1148226590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31504798, -1.2408739, -28.97027)
+layers = 4
+material_override = SubResource("StandardMaterial3D_2y5yt")
+use_collision = true
+collision_layer = 4
+collision_mask = 4
+size = Vector3(1.5, 1.5, 1.5)
+
+[node name="death_plane" type="Area3D" parent="." unique_id=1909665339]
+
+[node name="collision_shape" type="CollisionShape3D" parent="death_plane" unique_id=954671808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -24.382343, -70.73791)
+shape = SubResource("BoxShape3D_75xeh")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1274670664]
+environment = SubResource("Environment_fcfvj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=494158872]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 27.403988, -26.559135)
+shadow_enabled = true
+
+[node name="pause_menu" parent="." unique_id=1843028892 instance=ExtResource("7_pa8r4")]
+
+[connection signal="timeout" from="timer" to="timer" method="_on_timeout"]
+[connection signal="body_entered" from="death_plane" to="Character" method="_on_death_plane_body_entered"]
