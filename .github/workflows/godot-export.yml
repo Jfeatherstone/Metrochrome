@@ -57,14 +57,19 @@ jobs:
           EXPORT_DIR="$(readlink -f build)"
           cd $PROJECT_PATH
           godot --headless --verbose --export-release "Web" "$EXPORT_DIR/web/index.html"
+      - name: Install rsync 📚
+        run: |
+          apt-get update && apt-get install -y rsync
+      - name: Install coi-manager
+        run: |
+          npm i --save coi-serviceworker
+          cp node_modules/coi-serviceworker/coi-serviceworker.js build/web/
+          sed -i '1s/^/<script src="coi-serviceworker.js"></script> /' build/web/index.html
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: web
           path: build/web
-      - name: Install rsync 📚
-        run: |
-          apt-get update && apt-get install -y rsync
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
