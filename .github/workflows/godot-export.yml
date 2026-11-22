@@ -65,7 +65,7 @@ jobs:
           apt-get update && apt-get install -y curl
           curl -O https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.js
           mv coi-serviceworker.js build/web/
-          sed -i '1s/^/<script src="coi-serviceworker.js"></script> /' build/web/index.html
+          sed -i '1s@^@<script src="coi-serviceworker.js"></script>\n @' build/web/index.html
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
