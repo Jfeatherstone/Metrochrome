@@ -62,6 +62,7 @@ jobs:
           apt-get update && apt-get install -y rsync
       - name: Install coi-manager
         run: |
+          apt-get update && apt-get install -y curl
           curl -O https://raw.githubusercontent.com/gzuidhof/coi-serviceworker/master/coi-serviceworker.js
           mv coi-serviceworker.js build/web/
           sed -i '1s/^/<script src="coi-serviceworker.js"></script> /' build/web/index.html
